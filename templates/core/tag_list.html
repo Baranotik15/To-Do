@@ -1,9 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <ul>
+  <table>
+    <thead>
+    <tr>
+      <th>Tag Name</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
     {% for tag in tag_list %}
-      <li>{{ tag.name }}</li>>
+      <tr>
+        <td>{{ tag.name }}</td>
+        <td>
+          <a href="{% url 'core:tag_update' tag.pk %}">Edit</a> |
+          <a href="{% url 'core:tag_delete' tag.pk %}">Delete</a>
+        </td>
+      </tr>
     {% endfor %}
-  </ul>
+    </tbody>
+  </table>
+
+  <a href="{% url 'core:tag_create' %}" class="btn btn-primary">+ Add Tag</a>
+
 {% endblock %}

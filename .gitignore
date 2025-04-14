@@ -1,1 +1,43 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+*.log
 
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+local_settings.py
+db.sqlite3
+*.log
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# IDEs and text editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Python Distribution / Packaging
+.Python
+build/
+dist/
+*.egg-info/
+
+# JetBrains IDEs
+*.iml
+.idea/

@@ -5,8 +5,14 @@
   <title>To-do list</title>
 </head>
 <body>
-{% block content %}
 
-{% endblock %}
+<div class="container">
+  {% include 'includes/side_bar.html' %}
+
+  <div class="main-content">
+    {% block content %}{% endblock %}
+  </div>
+</div>
+
 </body>
 </html>

@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Task, Tag
+from .forms import TaskForm
 
 
 class HomePageView(ListView):
@@ -13,14 +14,14 @@ class HomePageView(ListView):
 
 class TaskCreateView(CreateView):
     model = Task
-    fields = ['content', 'deadline', 'tags']
+    form_class = TaskForm
     template_name = 'core/task_form.html'
     success_url = reverse_lazy('core:home')
 
 
 class TaskUpdateView(UpdateView):
     model = Task
-    fields = ['content', 'deadline', 'tags', 'is_done']
+    form_class = TaskForm
     template_name = 'core/task_form.html'
     success_url = reverse_lazy('core:home')
 

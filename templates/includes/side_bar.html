@@ -1,6 +1,11 @@
-<div class="sidebar">
-  <ul>
-    <li><a href="{% url 'core:home' %}">Home</a></li>
-    <li><a href="{% url 'core:tag_list' %}">Tag List</a></li>
+<div class="sidebar w-64 h-screen bg-gray-800 text-white p-4">
+  <ul class="space-y-4 w-full">
+    <li>
+      <a href="{% url 'core:home' %}" class="text-lg font-semibold hover:text-blue-400 transition duration-300">Home</a>
+    </li>
+    <li>
+      <a href="{% url 'core:tag_list' %}" class="text-lg font-semibold hover:text-blue-400 transition duration-300">Tag
+        List</a>
+    </li>
   </ul>
 </div>
